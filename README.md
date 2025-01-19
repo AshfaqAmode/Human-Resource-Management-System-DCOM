@@ -41,8 +41,7 @@ HRMSystem/
 │   └── seed.sql               # SQL file to seed initial data
 ├── build/                     # Compiled files (can be excluded from version control)
 ├── lib/                       # External libraries (if any)
-├── scripts/                   # Helper scripts for building and running
-│   ├── start-rmiregistry.sh   # Shell script to start the RMI registry
-│   ├── start-server.sh        # Shell script to start the server
-│   └── start-client.sh        # Shell script to start the client
-└── pom.xml or build.gradle    # Build tool configuration file (Maven/Gradle)
+└── scripts/                   # Helper scripts for building and running
+    ├── start-rmiregistry.sh   # Shell script to start the RMI registry
+    ├── start-server.sh        # Shell script to start the server
+    └── start-client.sh        # Shell script to start the client
