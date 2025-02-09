@@ -2,11 +2,14 @@ package client;
 
 import java.rmi.Naming;
 import java.util.Scanner;
+import server.Employee;
+import server.HRMService;
 
 public class EmployeeClient {
     private static HRMService hrmService;  // Reference to the RMI Service
     private static String loggedInEmployeeId = null;  // Store logged-in employee ID
 
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         try {
             // Lookup the RMI registry to find the HRMService
@@ -35,7 +38,7 @@ public class EmployeeClient {
             }
             scanner.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println("An error occurred: " + e.getMessage());
         }
     }
 
@@ -70,8 +73,8 @@ public class EmployeeClient {
                 case 1 -> viewProfile();
                 case 2 -> updateProfile(scanner);
                 case 3 -> viewLeaveBalance();
-                case 4 -> applyForLeave(scanner);
-                case 5 -> viewLeaveHistory();
+                /*case 4 -> applyForLeave(scanner);
+                case 5 -> viewLeaveHistory();*/
                 case 6 -> {
                     loggedInEmployeeId = null;
                     System.out.println("Logged out successfully.");
@@ -108,7 +111,7 @@ public class EmployeeClient {
         System.out.println("Your available leave balance: " + balance + " days");
     }
 
-    private static void applyForLeave(Scanner scanner) throws Exception {
+    /*private static void applyForLeave(Scanner scanner) throws Exception {
         System.out.print("Enter leave start date (YYYY-MM-DD): ");
         String startDate = scanner.nextLine();
         System.out.print("Enter leave end date (YYYY-MM-DD): ");
@@ -119,12 +122,12 @@ public class EmployeeClient {
             System.out.println("Leave application submitted.");
         } else {
             System.out.println("Leave application failed.");
-        }
+        } 
     }
 
     private static void viewLeaveHistory() throws Exception {
         String history = hrmService.getLeaveHistory(loggedInEmployeeId);
         System.out.println("\n--- Leave History ---");
         System.out.println(history);
-    }
+    }*/
 }
