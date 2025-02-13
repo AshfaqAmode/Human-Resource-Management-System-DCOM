@@ -17,5 +17,6 @@ CREATE TABLE IF NOT EXISTS "leave_applications" (
 	FOREIGN KEY("ic_passport") REFERENCES "employees"("ic_passport")
 );
 INSERT INTO "employees" VALUES ('tewe','wstwt','twtwwttw','twwttwtw','twwtwttw');
-INSERT INTO "employees" VALUES ('sfsf','sfsf','sfsf','YESSIRRRR','sfsf');
+INSERT INTO "employees" VALUES ('sfsf','sfsf','sfsf','sfsf','sfsf');
+INSERT INTO "employees" VALUES ('ID1','Employee','1','Manager','Engineering');
 COMMIT;
