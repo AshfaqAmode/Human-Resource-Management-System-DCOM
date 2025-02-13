@@ -5,3 +5,4 @@
     <version>3.42.0.0</version>
 </dependency>
     </dependencies>
+If the hrm.db doesn't work, the code for it is in the hrm.db.sql file to paste into your DB browser
