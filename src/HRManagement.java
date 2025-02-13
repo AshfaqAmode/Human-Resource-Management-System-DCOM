@@ -10,8 +10,8 @@ public interface HRManagement extends Remote {
     String generateYearlyLeaveReport(String icPassport) throws RemoteException;
     boolean approveLeave(String icPassport, String leaveId) throws RemoteException;
     boolean rejectLeave(String icPassport, String leaveId) throws RemoteException;
-    boolean deleteEmployee(String icPassport) throws RemoteException; // New method
-    List<String> viewLeaveApplications() throws RemoteException; // New method
-    boolean applyForLeave(String icPassport, String startDate, String endDate, String reason) throws RemoteException; // New method
+    boolean deleteEmployee(String icPassport) throws RemoteException; 
+    List<String> viewLeaveApplications() throws RemoteException; 
+    boolean applyForLeave(String icPassport, String startDate, String endDate, String reason) throws RemoteException; 
     
 }
