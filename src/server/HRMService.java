@@ -6,6 +6,7 @@ import java.util.List;
 
 public class HRMService extends UnicastRemoteObject implements HRMServiceInterface {
     private static final long serialVersionUID = 1L;
+    @SuppressWarnings("FieldMayBeFinal")
     private List<Employee> employees;
 
     // Constructor
